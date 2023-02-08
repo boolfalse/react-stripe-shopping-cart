@@ -4,7 +4,7 @@ import React from 'react';
 export default function Cancel() {
     return (
         <div>
-            <h1>Cancel</h1>
+            <h2>Sorry, your payment was not successful!</h2>
         </div>
     );
 }
