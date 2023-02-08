@@ -1,12 +1,14 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
+import NavbarComponent from "./components/NavbarComponent";
+import {Container} from "react-bootstrap";
 
 function App() {
     return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
+        <Container>
+            <NavbarComponent />
+        </Container>
     );
 }
 
