@@ -1,36 +1,20 @@
 
+// below is a test data manually created on Stripe dashboard
 const productsArray = [
     {
-        id: 1,
-        title: 'Product 1',
+        id: "price_1LnUTFDM1jwCEz8OGoOSXiSM",
+        title: "Coffee",
         price: 10,
-        // description: 'This is product 1',
-        // image: 'https://picsum.photos/200/300'
     },
     {
-        id: 2,
-        title: 'Product 2',
+        id: "price_1LnUTxDM1jwCEz8OAqHYTwKQ",
+        title: "Sunglasses",
         price: 20,
     },
     {
-        id: 3,
-        title: 'Product 3',
+        id: "price_1LnUUoDM1jwCEz8OvxIcJ7to",
+        title: "Camera",
         price: 30,
-    },
-    {
-        id: 4,
-        title: 'Product 4',
-        price: 40,
-    },
-    {
-        id: 5,
-        title: 'Product 5',
-        price: 50,
-    },
-    {
-        id: 6,
-        title: 'Product 6',
-        price: 60,
     },
 ];
 

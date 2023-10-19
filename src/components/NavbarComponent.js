@@ -17,6 +17,23 @@ export default function NavbarComponent() {
         setShowModal(true);
     }
 
+    const checkout = async () => {
+        const data = await fetch('http://localhost:4000/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                items: cart.items
+            })
+        });
+
+        const response = await data.json();
+        if (response.url) {
+            window.location.assign(response.url); // forwards the user to the Stripe checkout page
+        }
+    };
+
     return (<>
         <Navbar expand='sm'>
             <Navbar.Brand href='#home'>E-commerce Store</Navbar.Brand>
@@ -40,7 +57,7 @@ export default function NavbarComponent() {
                            ))
                        }</ul>
                        <p>Total: ${cart.getTotalCost().toFixed(2)}</p>
-                       <Button variant='success' href='#'>Checkout</Button>
+                       <Button variant='success' onClick={checkout}>Checkout</Button>
                    </>
             }</Modal.Body>
         </Modal>
